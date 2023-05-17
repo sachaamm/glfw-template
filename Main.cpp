@@ -1,7 +1,8 @@
 #include<iostream>
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
-
+// Include the main ReactPhysics3D header file 
+#include <reactphysics3d/reactphysics3d.h>
 
 const int windowWidth = 800;
 const int windowHeight = 800;
