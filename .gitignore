@@ -24,7 +24,7 @@
 *.lai
 *.la
 *.a
-*.lib
+# *.lib
 
 # Executables
 *.exe
@@ -32,3 +32,6 @@
 *.app
 
 .vs/
+
+x64\Debug\
+

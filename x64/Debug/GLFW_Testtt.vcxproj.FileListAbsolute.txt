@@ -1,1 +1,2 @@
 C:\Users\sachaamm\source\tests\GLFW_Testtt\x64\Debug\GLFW_Testtt.exe
+C:\Users\sacha\Desktop\X\Prog\Repo\glfw-template\x64\Debug\GLFW_Testtt.exe
