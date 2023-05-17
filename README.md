@@ -1,7 +1,7 @@
 # glfw-template
-A Visual Studio 2019/2022 Template for GLFW.
-[GLFW](https://www.glfw.org/) is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan development on the desktop. It provides a simple API for creating windows, contexts and surfaces, receiving input and events.
-See https://www.youtube.com/watch?v=45MIykWJ-C4 for detailed tutorial, credits to its author
+A Visual Studio 2019/2022 Template for GLFW. <br/>
+[GLFW](https://www.glfw.org/) is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan development on the desktop. It provides a simple API for creating windows, contexts and surfaces, receiving input and events. <br/>
+See https://www.youtube.com/watch?v=45MIykWJ-C4 for using OpenGL with C++ detailed tutorial, credits to its author.
 
 ## 1. Installation 
 - Tested with VS2019 and VS2022
