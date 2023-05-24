@@ -1,0 +1,8 @@
+class GeometryDrawer {
+
+
+	void Draw() {
+
+	}
+
+};

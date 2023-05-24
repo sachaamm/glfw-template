@@ -4,6 +4,9 @@
 // Include the main ReactPhysics3D header file 
 #include <reactphysics3d/reactphysics3d.h>
 
+#include "MyGeometryDrawer.h"
+#include "ShaderHandler.h"
+
 const int windowWidth = 800;
 const int windowHeight = 800;
 
@@ -22,6 +25,13 @@ int main()
 
 	// Create a GLFwindow object of 800 by 800 pixels, naming it "OpenGLTest"
 	GLFWwindow* window = glfwCreateWindow(windowWidth, windowHeight, "OpenGLTest", NULL, NULL);
+
+	const char* vertexShaderSource = "";
+
+
+	/*GLuint vertexShader = glCreateShader(GL_VERTEX_SHADER);
+	glShaderSource(vertexShader, 1, )*/
+
 
 	// Error check if the window fails to create
 	if (window == NULL) {
@@ -47,11 +57,31 @@ int main()
 	// Swap the back buffer with the front buffer
 	glfwSwapBuffers(window);
 
+	GeometryDrawer* myDrawer = new GeometryDrawer();
+	ShaderHandler* shaderHandler = new ShaderHandler();
+
+	// GLfloat 
+	DrawOutput* triangleDraw = myDrawer->DrawTriangle();
+
 	// Main while loop
 	while (!glfwWindowShouldClose(window)) {
+		
+		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
+		glClear(GL_COLOR_BUFFER_BIT);
+		glUseProgram(triangleDraw->shaderProgram);
+		glBindVertexArray(triangleDraw->VAO);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glfwSwapBuffers(window);
+		
 		// Take care of all GLFW events
 		glfwPollEvents();
+		
+		// shaderHandler->ImportDefaultVertexShader();
 	}
+
+	glDeleteVertexArrays(1, &triangleDraw->VAO);
+	glDeleteBuffers(1, &triangleDraw->VBO);
+	glDeleteProgram(triangleDraw->shaderProgram);
 
 	// Delete window before ending the program
 	glfwDestroyWindow(window); 

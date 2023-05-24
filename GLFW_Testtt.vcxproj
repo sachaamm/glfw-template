@@ -145,8 +145,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DrawOutput.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MyGeometryDrawer.cpp" />
+    <ClCompile Include="ShaderHandler.cpp" />
+    <ClCompile Include="StringUtil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DrawOutput.h" />
+    <ClInclude Include="MyGeometryDrawer.h" />
+    <ClInclude Include="ShaderHandler.h" />
+    <ClInclude Include="StringUtil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="file.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="frag.glsl" />
+    <None Include="vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
